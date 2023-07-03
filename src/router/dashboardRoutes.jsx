@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/mainLayout";
-import Login from "../pages/Login/Login";
+import Loadable from "../components/Loader/Loadable"
+import { lazy } from "react";
+
+const Login = Loadable(lazy(()=>import('../pages/Login/Login')))
 
 export const dashboardRoutes = createBrowserRouter([
   {

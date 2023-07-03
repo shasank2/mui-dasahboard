@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
-import './assets/scss/style.scss';
+// import './index.css'
+// import './assets/scss/style.scss';
 import { RouterProvider } from 'react-router-dom'
 import { dashboardRoutes } from './router/dashboardRoutes.jsx'
 import { CssBaseline } from '@mui/material'

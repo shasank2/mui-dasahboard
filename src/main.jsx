@@ -9,7 +9,7 @@ import { CssBaseline, ThemeProvider, } from '@mui/material'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider theme={themes}>
+    <ThemeProvider theme={themes()}>
       <CssBaseline />
       <RouterProvider router={dashboardRoutes} />
     </ThemeProvider>

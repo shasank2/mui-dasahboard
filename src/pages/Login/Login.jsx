@@ -1,11 +1,12 @@
 import { Box, Divider, Grid, Stack, Typography } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
 import MainCard from '../../components/UI/Card/MainCard';
-import { Link } from 'react-router-dom';
+import LoginCompnent from '../../components/PageComponents/Login/Login';
 
 const AuthWrapper1 = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.light,
-    minHeight: '100vh'
+    minHeight: '100vh',
+
 }));
 
 const Login = () => {
@@ -13,21 +14,13 @@ const Login = () => {
 
     return (
         <AuthWrapper1>
-            <Grid container justifyContent="center" alignContent={"center"} sx={{ minHeight: 'calc(100vh - 68px)' }} >
-                <MainCard
-                    sx={{
-                        maxWidth: { xs: 400, lg: 475 },
-                        margin: { xs: 2.5, md: 3 },
-                        '& > *': {
-                            flexGrow: 1,
-                            flexBasis: '50%'
-                        }
-                    }}
-                    content={false}
+            <Grid container justifyContent="center" alignContent={"center"} sx={{ minHeight: '100vh' }} >
+                <Box>
+                    <MainCard sx={{ p: { xs: 3, lg: 5 }, maxWidth: { xs: 400, lg: 475 }, borderRadius:"10px"  }}>
+                        <LoginCompnent />
 
-                >
-                    asdasd
-                </MainCard>
+                    </MainCard>
+                </Box>
             </Grid>
             {/* <Grid container direction="column" justifyContent="flex-end" sx={{ minHeight: '100vh' }}>
                 <Grid item xs={12}>

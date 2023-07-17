@@ -1,12 +1,12 @@
 import { createTheme } from '@mui/material/styles';
 
 // assets
-import colors from '../../assets/scss/palette.scss?inline';
+import colors from '../assets/scss/palette.scss?.inline';
 
 // project imports
 import componentStyleOverrides from './compStyleOverride';
-// import themePalette from './palette';
-// import themeTypography from './typography';
+import themePalette from './palette';
+import themeTypography from './typography';
 
 /**
  * Represent theme style and structure as per Material-UI
@@ -33,7 +33,7 @@ export const theme = (customization) => {
 
   const themeOptions = {
     direction: 'ltr',
-    // palette: themePalette(themeOption),
+    palette: themePalette(themeOption),
     mixins: {
       toolbar: {
         minHeight: '48px',
@@ -43,12 +43,12 @@ export const theme = (customization) => {
         }
       }
     },
-    // typography: themeTypography(themeOption)
+    typography: themeTypography(themeOption)
   };
 
   const themes = createTheme(themeOptions);
   themes.components = componentStyleOverrides(themeOption);
-console.log(themes)
+
   return themes;
 };
 

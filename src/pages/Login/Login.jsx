@@ -1,20 +1,29 @@
 import { Box, Divider, Grid, Stack, Typography } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
-import React from 'react'
 import MainCard from '../../components/UI/Card/MainCard';
-import { Link } from 'react-router-dom';
+import LoginCompnent from '../../components/PageComponents/Login/Login';
+import theme from '../../themes'
 
 const AuthWrapper1 = styled('div')(({ theme }) => ({
-    backgroundColor: theme.palette.primary.light,
-    minHeight: '100vh'
+    // backgroundColor: theme.palette.primary.light,
+    minHeight: '100vh',
+
 }));
 
 const Login = () => {
     const theme = useTheme();
-
+console.log(theme)
     return (
         <AuthWrapper1>
-            <Grid container direction="column" justifyContent="flex-end" sx={{ minHeight: '100vh' }}>
+            <Grid container justifyContent="center" alignContent={"center"} sx={{ minHeight: '100vh' }} >
+                <Box>
+                    <MainCard sx={{ p: { xs: 3, lg: 5 }, maxWidth: { xs: 400, lg: 475 }, borderRadius:"10px"  }}>
+                        <LoginCompnent />
+
+                    </MainCard>
+                </Box>
+            </Grid>
+            {/* <Grid container direction="column" justifyContent="flex-end" sx={{ minHeight: '100vh' }}>
                 <Grid item xs={12}>
                     <Grid container justifyContent="center" alignItems="center" sx={{ minHeight: 'calc(100vh - 68px)' }}>
                         <Grid item sx={{ m: { xs: 1, sm: 3 }, mb: 0 }}>
@@ -34,7 +43,7 @@ const Login = () => {
                                 <Grid container spacing={2} alignItems="center" justifyContent="center">
                                     <Grid item sx={{ mb: 3 }}>
                                         <Link to="#">
-                                            {/* <Logo /> */}
+                                            <Logo />
                                         </Link>
                                     </Grid>
                                     <Grid item xs={12}>
@@ -52,7 +61,7 @@ const Login = () => {
                                         </Grid>
                                     </Grid>
                                     <Grid item xs={12}>
-                                        {/* <AuthLogin /> */}
+                                        <AuthLogin />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Divider />
@@ -60,7 +69,7 @@ const Login = () => {
                                     <Grid item xs={12}>
                                         <Grid item container direction="column" alignItems="center" xs={12}>
                                             <Typography component={Link} to="/pages/register/register3" variant="subtitle1" sx={{ textDecoration: 'none' }}>
-                                                Don&apos;t have an account?
+                                                Dont have an account?
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -70,10 +79,10 @@ const Login = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                {/* <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
+                <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
                     <AuthFooter />
-                </Grid> */}
-            </Grid>
+                </Grid>
+            </Grid> */}
         </AuthWrapper1>
     )
 }

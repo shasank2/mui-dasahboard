@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/mainLayout";
-import Loadable from "../components/Loader/Loadable"
+import Loadable from "../components/UI/Loader/Loadable"
 import { lazy } from "react";
 
 const Login = Loadable(lazy(()=>import('../pages/Login/Login')))

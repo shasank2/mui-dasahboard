@@ -2,17 +2,16 @@ import { Box, Divider, Grid, Stack, Typography } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
 import MainCard from '../../components/UI/Card/MainCard';
 import LoginCompnent from '../../components/PageComponents/Login/Login';
-import theme from '../../themes'
 
 const AuthWrapper1 = styled('div')(({ theme }) => ({
-    // backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.light,
     minHeight: '100vh',
 
 }));
 
 const Login = () => {
     const theme = useTheme();
-console.log(theme)
+
     return (
         <AuthWrapper1>
             <Grid container justifyContent="center" alignContent={"center"} sx={{ minHeight: '100vh' }} >
